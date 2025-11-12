@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reproductor embebido (formato vertical)</title>
+  <style>
+    /* Diseño minimal y responsive para formato vertical (9:16) */
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:#f7f8fb; color:#111; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; }
+    .card { width: min(400px, 95%); background:white; box-shadow:0 6px 20px rgba(10,10,10,0.08); border-radius:12px; padding:18px; }
+    h1{font-size:1.05rem;margin:0 0 12px;text-align:center}
+    .player-wrap{ position:relative; width:100%; /* relación 9:16 vertical */ padding-top:177.78%; background:#000; border-radius:8px; overflow:hidden; }
+    .player-wrap iframe{ position:absolute; top:0; left:0; width:100%; height:100%; border:0; }
+    .note{ margin-top:12px; font-size:0.9rem; color:#555; text-align:center }
+    a.small{ font-size:0.9rem }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Reproductor embebido (vertical)</h1>
+
+    <!--
+      INSTRUCCIONES:
+      - Este diseño usa una relación 9:16 (vertical), típica de smartphone.
+      - Reemplaza el valor de 'src' del iframe por la URL de embed del reproductor que quieras usar.
+      - El iframe incluye atributos comunes de "allow" para autoplay y fullscreen.
+    -->
+
+    <div class="player-wrap">
+      <iframe
+        src="https://youtube.com/shorts/K3p0ViudSXs" 
+        title="Reproductor embebido vertical"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+        allowfullscreen
+        loading="lazy"></iframe>
+    </div>
+
+    <p class="note">Si el embed no carga, copia la URL del reproductor en el siguiente enlace: <a class="small" href="https://youtube.com/shorts/K3p0ViudSXs" target="_blank" rel="noopener">Abrir reproductor</a>.</p>
+  </div>
+</body>
+</html>
